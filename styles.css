@@ -82,41 +82,6 @@ body{
 
 }
 
-/* 
-    @media screen (min-width: SIZEpx) AND (max-width: SIZEpx){
-
-    }
-
-    @supports (background-image: url('images/hero_1-1920w.webp')){
-
-    }
-
-    @media screen and (max-width: 600px){
-        .card{
-            display: flex;
-            flex-direction: column;
-            background-color: (255, 255, 255, 0.8);
-            border-radius: 5px;
-            box-shadow: 0 2px 5px (0, 0, 0, 0.1);
-            padding: 1rem;
-            margin: 1rem;
-            max-width: 300px:
-        }
-    }
-
-    @supports (background-iamge: url('images/hero_1-1920w.webp')){
-        .hero{
-            display: flex;
-            flex-direction: column;
-            background-image: url('images/hero_1-1920w.webp');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-        }
-    }
-
-*/
-
 nav > a{
     color: rgba(0, 0, 0, 0.7);
     text-decoration: none;
