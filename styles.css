@@ -7,14 +7,115 @@ body{
 .hero{
     display: flex;
     align-content: flex-start;
-    justify-content: space-around;
     flex-wrap: wrap;
     align-items: baseline;
+    justify-content: space-around;
     background-image: url('images/hero_1.jpg');
     background-size: cover;
+    background-position: center center;
     height: 100vh;
     width: 100%;
 }
+
+@media screen and (max-width: 525px) {
+  .hero {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+  }
+}
+
+@supports (background-image: url('images/hero_imgs/hero_1-1920w.webp')){
+    .hero{
+        background-image: url('images/hero_imgs/hero_1-1920w.webp');
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+@media screen and (min-width: 480px){
+    .hero{
+        background-image: url('images/hero_imgs/hero_1-480w.webp');
+        background-size: cover;
+        background-position: center center;
+    }
+
+}
+
+@media screen and (min-width: 640px){
+    .hero{
+        background-image: url('images/hero_imgs/hero_1-640w.webp');
+        background-size: cover;
+        background-position: center center;
+    }
+
+}
+
+
+@media screen and (min-width: 768px){
+    .hero{
+        background-image: url('images/hero_imgs/hero_1-768w.webp');
+        background-size: cover;
+        background-position: center center;
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+    .hero{
+        background-image: url('images/hero_imgs/hero_1-1024w.webp');
+        background-size: cover;
+        background-position: center center;
+    }
+
+}
+
+@media screen and (min-width: 1920px){
+    .hero{
+        background-image: url('images/hero_imgs/hero_1-1920w.webp');
+        background-size: cover;
+        background-position: center center;
+    }
+
+}
+
+/* 
+    @media screen (min-width: SIZEpx) AND (max-width: SIZEpx){
+
+    }
+
+    @supports (background-image: url('images/hero_1-1920w.webp')){
+
+    }
+
+    @media screen and (max-width: 600px){
+        .card{
+            display: flex;
+            flex-direction: column;
+            background-color: (255, 255, 255, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px (0, 0, 0, 0.1);
+            padding: 1rem;
+            margin: 1rem;
+            max-width: 300px:
+        }
+    }
+
+    @supports (background-iamge: url('images/hero_1-1920w.webp')){
+        .hero{
+            display: flex;
+            flex-direction: column;
+            background-image: url('images/hero_1-1920w.webp');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+    }
+
+*/
 
 nav > a{
     color: rgba(0, 0, 0, 0.7);
@@ -52,7 +153,7 @@ main > p{
     box-shadow: 5px 5px rgb(218, 217, 217);
 }
 
-.card > img{
+.card picture img{
     padding-top: 25px;
     width: 250px;
     height: 200px;
