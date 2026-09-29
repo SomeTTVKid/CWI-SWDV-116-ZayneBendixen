@@ -18,14 +18,15 @@ body{
 }
 
 @media screen and (max-width: 525px) {
-  .hero {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+    .hero {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-  .hero h1 {
-    font-size: 20px;
-  }
+    .hero h1 {
+        font-size: 20px;
+    }
+
 }
 
 @supports (background-image: url('images/hero_imgs/hero_1-1920w.webp')){
@@ -82,15 +83,79 @@ body{
 
 }
 
-nav > a{
+nav li a{
     color: rgba(0, 0, 0, 0.7);
     text-decoration: none;
     padding: 10px;
 }
 
-nav > a:hover{
+nav li > a:hover{
     color: cadetblue;
     text-decoration: underline;
+}
+
+#toggle {
+    appearance: none;
+    border: none;
+    display: none;
+}
+
+@media screen and (max-width: 600px){
+    .hero{
+        position: relative;
+    }
+
+    .menu{
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: black;
+        width: 200px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: left;
+        position: absolute;
+        top: 3.5rem;
+        right: 1rem;
+    }
+
+    .menu li{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        color: white;
+    }
+
+    .menu li::before{
+        width: 1.5rem;
+        text-align: center;
+    }
+
+    #toggle:checked + .menu{
+        display: flex;
+    }
+
+    #toggle{
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+        width: 2rem;
+    }
+
+    #toggle::before{
+        content: "\2261";
+        font-size: 1.7rem;
+    }
+
+    #toggle:checked::before{
+        content: "\00D7";
+    }
+
+    nav li a{
+        color: white;
+    }
 }
 
 main > p{
