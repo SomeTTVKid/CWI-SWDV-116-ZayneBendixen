@@ -17,6 +17,13 @@ body{
     width: 100%;
 }
 
+.rental-search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .video{
     width: 100%;
     height: 800px;          
