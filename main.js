@@ -1,7 +1,8 @@
-function validateSearch(event) {
+function validateSearch() {
     const errors = [];
 
     const carType = document.getElementById("Car Type").value;
+    const todaysDate = new Date();
     
     const pickupDate = document.getElementById("Pickup Date").value;
     const pickupDateAsDate = new Date(pickupDate);
@@ -18,6 +19,11 @@ function validateSearch(event) {
     }
     if(!returnDate){
         errors.push("Must select a return date.");
+    }
+
+    // The pickup date is in the future.
+    if(pickupDateAsDate < todaysDate){
+        errors.push("Pickup date must be in the future.");
     }
 
     // The return date is after the pickup date.
