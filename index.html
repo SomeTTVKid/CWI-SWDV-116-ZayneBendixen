@@ -29,7 +29,7 @@
         <div class="rental-search">
             <h2>Rent A Car Today</h2>
             <!-- Defaults to GET so no need to specify it -->
-            <form action="cars.html">
+            <form action="cars.html" id="carForm">
                 <label for="Car Type">Car Type</label>
                 <select name="Car Type" id="Car Type">
                     <option value="ford">Ford</option>
@@ -46,7 +46,7 @@
                 <label for="Return Date">Return Date</label>
                 <input type="date" id="Return Date" name="Return Date">
 
-                <input type="submit" value="Search">
+                <input type="submit" value="Search" id="submitButton">
             </form>
         </div>
 
@@ -141,6 +141,6 @@
     <footer>
         <p>&copy; 2026</p>
     </footer>
-    <script src="password.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
