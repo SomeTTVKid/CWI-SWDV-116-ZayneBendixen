@@ -34,6 +34,46 @@
             document.addEventListener("DOMContentLoaded", function (){
                 listCars();
             });
+
+            document.addEventListener("confirm-rental", (e) => {
+                const dialogue = document.createElement("dialog");
+                const confirm = document.createElement("button");
+                const deny = document.createElement("button");
+
+                confirm.addEventListener("click", () => {
+                    console.log(e.detail);
+                    dialogue.close();
+                })
+
+                deny.addEventListener("click", () => {
+                    dialogue.close();
+                })
+
+                const name = document.createElement("p");
+                const type = document.createElement("p");
+                const pickupDate = document.createElement("p");
+                const returnDate = document.createElement("p");
+
+                name.textContent = e.detail.name;
+                type.textContent = e.detail.carType;
+                pickupDate.textContent = e.detail.startDate;
+                returnDate.textContent = e.detail.returnDate;
+
+                dialogue.setAttribute("closedBy", "any")
+                dialogue.textContent = "Confirm Selection";
+                confirm.textContent = "Confirm?";
+                deny.textContent = "Cancel.";
+
+                dialogue.appendChild(name);
+                dialogue.appendChild(type);
+                dialogue.appendChild(pickupDate);
+                dialogue.appendChild(returnDate);
+
+                dialogue.appendChild(confirm);
+                dialogue.appendChild(deny);
+                document.body.appendChild(dialogue);
+                dialogue.showModal();
+            });
         </script>
     </body>
     <footer>
