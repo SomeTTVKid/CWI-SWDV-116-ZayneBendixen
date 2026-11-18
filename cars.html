@@ -55,13 +55,13 @@
                 const returnDate = document.createElement("p");
 
                 name.textContent = e.detail.name;
-                type.textContent = e.detail.carType;
-                pickupDate.textContent = e.detail.startDate;
-                returnDate.textContent = e.detail.returnDate;
+                type.textContent = "Vehicle Type: " + e.detail.carType;
+                pickupDate.textContent = "Pickup Date: " + e.detail.startDate;
+                returnDate.textContent = "Return Date: " + e.detail.returnDate;
 
                 dialogue.setAttribute("closedBy", "any")
                 dialogue.textContent = "Confirm Selection";
-                confirm.textContent = "Confirm?";
+                confirm.textContent = "Confirm.";
                 deny.textContent = "Cancel.";
 
                 dialogue.appendChild(name);
