@@ -108,6 +108,23 @@ function displayCars(carsArray) {
         const description = document.createElement("p");
         description.textContent = `${car.year} — ${car.description}`;
 
+        // Rent Car Button
+        const button = document.createElement("button");
+        button.textContent = "Rent Me!";
+        button.addEventListener("click", () => {
+            button.dispatchEvent(new CustomEvent("confirm-rental", {
+                detail: {
+                    name: car.name,
+                    carType: car.type,
+                    // car.pickupDate returns null
+                    startDate: params.get("Pickup Date"),
+                    returnDate: params.get("Return Date")
+                },
+                bubbles: true
+            }));
+        });
+        card.appendChild(button);
+
         cardText.appendChild(heading);
         cardText.appendChild(description);
         card.appendChild(cardText);
@@ -197,6 +214,7 @@ if(searchButton){
             errors.forEach(function (error){
                 const listItem = document.createElement("li");
                 listItem.textContent = error;
+                listItem.style.color = 'red';
                 errorList.appendChild(listItem);
             });
 
